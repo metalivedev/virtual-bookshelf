@@ -1,7 +1,7 @@
 # Virtual Bookshelf
 This is a simple visualisation of books on a bookshelf using some CSS transforms to give the effect of picking out the book when you hover over it.
 
-I use it on my [personal site](https://petargyurov.com) to track what books I've read. It integrates nicely with static site generators, and well, just about anything since it's all vanilla JS, CSS and HTML.
+The author uses it on his [personal site](https://petargyurov.com/bookshelf) to track what books he's read. It integrates nicely with static site generators, and well, just about anything since it's all vanilla JS, CSS and HTML.
 
 ![Example](https://i.imgur.com/6u0CySS.png)
 
@@ -17,6 +17,20 @@ A book is defined as follows:
     <div class="side top"></div>
     <div class="side cover"></div>
 </div>
+```
+or, how he actually does the covers is here:
+
+```
+<div class="book">
+        <div class="side spine" style="height: 277px; top: 3px; background-image: var(--argyle); background-color: maroon;">
+          <span class="spine-title"> The Anthropocene Reviewed </span>
+          <span class="spine-author">
+            JG
+          </span>
+        </div>
+        <div class="side top" style="top: 3px;"></div>
+        <div class="side cover" style="background-image: url(&quot;https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1616514130l/55145261.jpg&quot;); height: 277px; top: 3px;"></div>
+      </div>
 ```
 
 Simply add this snippet for each book you want inside `<div class="bookshelf">`.
